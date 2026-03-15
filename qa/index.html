@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>よくある質問 - Go Kifu AI</title>
+  <style>
+    :root {
+      --bg: #f7f7f8;
+      --card: #ffffff;
+      --border: #e5e7eb;
+      --title: #1f2937;
+      --body: #4b5563;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--body);
+      font-family: "Hiragino Kaku Gothic ProN", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 20px 14px 32px;
+    }
+
+    h1 {
+      margin: 6px 0 16px;
+      text-align: center;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--title);
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 14px 12px;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+    }
+
+    .question {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--title);
+      line-height: 1.5;
+    }
+
+    .answer {
+      margin: 0;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1>よくある質問</h1>
+
+    <section class="faq-list">
+      <article class="faq-card"><h2 class="question">Q. 無料トライアルはありますか？</h2><p class="answer">はい。初回登録時に1ヶ月間の無料体験がつきます。期間内に解約すれば料金はかかりません。</p></article>
+      <article class="faq-card"><h2 class="question">Q. 解約はどこからできますか？</h2><p class="answer">アプリ内の設定画面にある「サブスク管理」ボタンから解約できます。または iPhone の「設定 → 自分の名前 → サブスクリプション」からも同様に解約できます。</p></article>
+      <article class="faq-card"><h2 class="question">Q. 機種変更したらどうなりますか？</h2><p class="answer">同じ Apple ID でサインインすれば、「購入を復元」ボタンからサブスクリプションを復元できます。棋譜データは Google Drive または iCloud Drive のバックアップから復元してください。</p></article>
+      <article class="faq-card"><h2 class="question">Q. 歴史対局とは何ですか？</h2><p class="answer">本因坊秀策や呉清源など、歴史的棋士の棋譜を学んだ専用AI と対局できる機能です。人間モデルのダウンロードが必要です。</p></article>
+      <article class="faq-card"><h2 class="question">Q. 人間モデルと検討用モデルの違いは？</h2><p class="answer">検討用モデルは最善手を探すためのもの、人間モデルは人間らしい棋風を再現するためのものです。</p></article>
+      <article class="faq-card"><h2 class="question">Q. 盤面認識がうまくいきません</h2><p class="answer">碁盤全体がフレームに収まるように撮影してください。照明や影が碁盤にあたらないように注意すると、認識精度が上がります。</p></article>
+      <article class="faq-card"><h2 class="question">Q. 盤面認識は途中局面でも使えますか？</h2><p class="answer">はい。途中局面を認識してそのまま分析を開始できます。手順情報は含まれず、盤上の石の配置のみが読み取られます。</p></article>
+      <article class="faq-card"><h2 class="question">Q. SGFファイルの読み込みはできますか？</h2><p class="answer">はい。SGF インポート画面からファイルを選択するか、他のアプリから SGFファイルを共有して開くことができます。</p></article>
+      <article class="faq-card"><h2 class="question">Q. 棋譜のバックアップはどうすればいいですか？</h2><p class="answer">Google アカウントでログインすると、Google Drive へ 3日ごとに自動バックアップされます。iCloud Drive への手動バックアップにも対応しています。</p></article>
+      <article class="faq-card"><h2 class="question">Q. 棋譜の入力を間違えました</h2><p class="answer">棋譜編集画面で手順の挿入・削除・修正ができます。途中の手を変更しても、それ以降の手順は保持されます。</p></article>
+      <article class="faq-card"><h2 class="question">Q. AI検討はオフラインで使えますか？</h2><p class="answer">はい。KataGoモデルをダウンロード済みであれば、インターネット接続なしで動作します。</p></article>
+      <article class="faq-card"><h2 class="question">Q. KataGoモデルの違いは何ですか？</h2><p class="answer">ブロック数が大きいほど高精度ですが、端末への負荷も大きくなります。10ブロック（軽量・高速）、15ブロック（バランス型）、18ブロック（高精度）、28ブロック（最高精度）から選べます。端末の性能に合わせてお選びください。</p></article>
+      <article class="faq-card"><h2 class="question">Q. 「モデルが見つかりません」と表示されます</h2><p class="answer">まれにモデルファイルが消えることがあります。設定画面からモデルを再ダウンロードしてください。</p></article>
+      <article class="faq-card"><h2 class="question">Q. 候補手の「優勢」と終局整地の結果がズレるのはなぜ？</h2><p class="answer">候補手の優勢は AI の評価値、終局整地は地・アゲハマ・死に石・コミの集計値です。定義が異なるため、特に終盤でズレが生じることがあります。</p></article>
+      <article class="faq-card"><h2 class="question">Q. 解析中に端末が熱くなります</h2><p class="answer">KataGo は GPU をフル活用するため、長時間の連続解析では端末が熱くなることがあります。設定で軽めのモデルに切り替えるか、こまめに解析を停止してください。</p></article>
+      <article class="faq-card"><h2 class="question">Q. 終局整地は途中局面でも使えますか？</h2><p class="answer">使えます。その局面で終局したと仮定した評価として見られます。実戦の最終結果とは一致しない場合があります。</p></article>
+    </section>
+  </main>
+</body>
+</html>
